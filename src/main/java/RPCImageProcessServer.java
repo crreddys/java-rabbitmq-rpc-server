@@ -28,6 +28,8 @@ public class RPCImageProcessServer {
 
                 try {
                     System.out.println(" [.] Received request");
+                    String contentType = delivery.getProperties().getContentType();
+                    System.out.println(" [.] Received request contentType: " + contentType);
 
                     response = delivery.getBody();
                 } catch (RuntimeException e) {
